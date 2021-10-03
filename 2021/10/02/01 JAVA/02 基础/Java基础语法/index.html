@@ -253,6 +253,14 @@ var _hmt = _hmt || [];
     
 		<span>Tags：</span>
             
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/Java/">Java</a>
+                        </i>
+                    </span>
+                
+            
     
 		</div>
 
@@ -261,7 +269,7 @@ var _hmt = _hmt || [];
 <div id="article-content">
 	<h1 id="一-注释-标识符和关键字"><a class="markdownIt-Anchor" href="#一-注释-标识符和关键字"></a> 一、注释、标识符和关键字</h1>
 <h2 id="一-注释"><a class="markdownIt-Anchor" href="#一-注释"></a> (一) 注释</h2>
-<p>​     <mark>书写注释是个好习惯😎</mark></p>
+<p>​      <mark>书写注释是个好习惯😎</mark></p>
 <ol>
 <li>
 <p>单行注释   <code>//这是例子</code></p>
@@ -278,11 +286,11 @@ var _hmt = _hmt || [];
 </li>
 </ol>
 <h2 id="二-标识符"><a class="markdownIt-Anchor" href="#二-标识符"></a> (二) 标识符</h2>
-<p>​     Java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。</p>
-<p>​     <strong>注意:</strong></p>
+<p>​		Java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。</p>
+<p>​		<strong>注意:</strong></p>
 <ul>
-<li>所有的标识符都应该以字母 ( A-Z / a-z ) 、美元符 ( $ ) 或者下划线 ( _ ) 开始</li>
-<li>首字符之后可以是字母 ( A-Z / a-z ) 、美元符 ( $ ) 、下划线 ( _ ) 或者数字的任何字符组合</li>
+<li>所有的标识符都应该以<code>字母</code> ( A-Z / a-z ) 、<code>美元符</code> ( $ ) 或者<code>下划线</code> ( _ ) 开始</li>
+<li>首字符之后可以是<code>字母</code> ( A-Z / a-z ) 、<code>美元符</code> ( $ ) 、<code>下划线</code> ( _ ) 或者<code>数字</code>的任何字符组合</li>
 <li><mark>不能用关键字作为变量名或方法名</mark></li>
 <li>标识符是<mark>大小写敏感</mark>的</li>
 <li>可以使用中文命名，但一般不建议这样去使用，也不建议使用拼音</li>
@@ -370,10 +378,10 @@ var _hmt = _hmt || [];
 <ol>
 <li>整数类型
 <ul>
-<li><code>byte</code>    占1个字节范围 : -128 ~ 127</li>
-<li><code>short</code>    占2个字节范围 : -32768 ~ 32767</li>
-<li><code>int</code>    占4个字节范围 : -2147483648 ~ 2147483647</li>
-<li><code>long</code>    占8个字节范围 : -9223372036854665808 ~ 9223372036854775807
+<li><code>byte</code>    占<strong>1个字节</strong>范围 : <code>-128 ~ 127</code></li>
+<li><code>short</code>    占<strong>2个字节</strong>范围 : <code>-32768 ~ 32767</code></li>
+<li><code>int</code>    占<strong>4个字节</strong>范围 : <code>-2147483648 ~ 2147483647</code></li>
+<li><code>long</code>    占<strong>8个字节</strong>范围 : <code>-9223372036854665808 ~ 9223372036854775807</code>
 <ul>
 <li><code>long</code> 类型要在数字后面加个 <code>L</code></li>
 </ul>
@@ -382,17 +390,17 @@ var _hmt = _hmt || [];
 </li>
 <li>浮点类型
 <ul>
-<li><code>float</code>    占4个字节
+<li><code>float</code>    占<strong>4个字节</strong>
 <ul>
 <li><code>float</code> 类型要在数字后面加个 <code>F</code></li>
 </ul>
 </li>
-<li><code>double</code>    占8个字节</li>
+<li><code>double</code>    占<strong>8个字节</strong></li>
 </ul>
 </li>
 <li>字符类型
 <ul>
-<li><code>char</code>    占2个字节
+<li><code>char</code>    占<strong>2个字节</strong>
 <ul>
 <li><code>string</code> 不是关键字，是类</li>
 </ul>
@@ -402,7 +410,7 @@ var _hmt = _hmt || [];
 </ol>
 <h3 id="2-boolean类型"><a class="markdownIt-Anchor" href="#2-boolean类型"></a> 2. boolean类型</h3>
 <ul>
-<li><code>boolean</code>    占1位，其值只有<code>true</code>和<code>false</code>两个</li>
+<li><code>boolean</code>    占<strong>1位</strong>，其值只有<code>true</code>和<code>false</code>两个</li>
 </ul>
 <h2 id="二引用类型-reference-type"><a class="markdownIt-Anchor" href="#二引用类型-reference-type"></a> (二)引用类型 ( reference type )</h2>
 <ul>
@@ -411,7 +419,7 @@ var _hmt = _hmt || [];
 <li>数组</li>
 </ul>
 <h2 id="三-补充"><a class="markdownIt-Anchor" href="#三-补充"></a> (三) 补充</h2>
-<p>​     <strong>什么是字节 :</strong></p>
+<h3 id="1-什么是字节"><a class="markdownIt-Anchor" href="#1-什么是字节"></a> 1. 什么是字节 :</h3>
 <ul>
 <li>
 <p>位 ( bit ) : 是计算机<code>内部数据</code>储存的最小单位，11001100是一个八位二进制数</p>
@@ -433,10 +441,575 @@ var _hmt = _hmt || [];
 </blockquote>
 </li>
 </ul>
+<h3 id="2-整数拓展"><a class="markdownIt-Anchor" href="#2-整数拓展"></a> 2. 整数拓展</h3>
+<ol>
+<li>二进制  <code>0b</code>开头</li>
+<li>十进制</li>
+<li>八进制  <code>0</code>开头</li>
+<li>十六进制  <code>0x</code>开头</li>
+</ol>
+<h3 id="3-浮点数拓展"><a class="markdownIt-Anchor" href="#3-浮点数拓展"></a> 3. 浮点数拓展</h3>
+<ul>
+<li>浮点数是<code>有限的</code>、<code>离散的</code>，<code>有舍入误差</code>，结果只是<code>大约数</code>，接近但是<code>不等于</code></li>
+<li>最好<mark>完全避免</mark>使用浮点数进行比较</li>
+<li>最好<mark>完全避免</mark>使用浮点数进行比较</li>
+<li>最好<mark>完全避免</mark>使用浮点数进行比较</li>
+</ul>
+<h3 id="4-字符拓展"><a class="markdownIt-Anchor" href="#4-字符拓展"></a> 4. 字符拓展</h3>
+<ul>
+<li>
+<p>所有的字符本质上都是<code>数字</code></p>
+</li>
+<li>
+<p>转义字符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">转义字符</th>
+<th style="text-align:center">意义</th>
+<th style="text-align:center">ASCII码值（十进制）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">\a</td>
+<td style="text-align:center">响铃(BEL)</td>
+<td style="text-align:center">007</td>
+</tr>
+<tr>
+<td style="text-align:center">\b</td>
+<td style="text-align:center">退格(BS) ，将当前位置移到前一列</td>
+<td style="text-align:center">008</td>
+</tr>
+<tr>
+<td style="text-align:center">\f</td>
+<td style="text-align:center">换页(FF)，将当前位置移到下页开头</td>
+<td style="text-align:center">012</td>
+</tr>
+<tr>
+<td style="text-align:center">\n</td>
+<td style="text-align:center">换行(LF) ，将当前位置移到下一行开头</td>
+<td style="text-align:center">010</td>
+</tr>
+<tr>
+<td style="text-align:center">\r</td>
+<td style="text-align:center">回车(CR) ，将当前位置移到本行开头</td>
+<td style="text-align:center">013</td>
+</tr>
+<tr>
+<td style="text-align:center">\t</td>
+<td style="text-align:center">水平制表(HT)，跳到下一个TAB位置</td>
+<td style="text-align:center">009</td>
+</tr>
+<tr>
+<td style="text-align:center">\v</td>
+<td style="text-align:center">垂直制表(VT)</td>
+<td style="text-align:center">011</td>
+</tr>
+<tr>
+<td style="text-align:center">\\</td>
+<td style="text-align:center">代表一个反斜线字符<code>\</code></td>
+<td style="text-align:center">092</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\'</code></td>
+<td style="text-align:center">代表一个单引号（撇号）字符</td>
+<td style="text-align:center">039</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\&quot;</code></td>
+<td style="text-align:center">代表一个双引号字符</td>
+<td style="text-align:center">034</td>
+</tr>
+<tr>
+<td style="text-align:center">\0</td>
+<td style="text-align:center">空字符(NULL)</td>
+<td style="text-align:center">000</td>
+</tr>
+<tr>
+<td style="text-align:center">\ddd</td>
+<td style="text-align:center">1到3位八进制数所代表的任意字符</td>
+<td style="text-align:center">三位八进制</td>
+</tr>
+<tr>
+<td style="text-align:center">\xhh</td>
+<td style="text-align:center">1到2位十六进制所代表的任意字符</td>
+<td style="text-align:center">二位十六进制</td>
+</tr>
+</tbody>
+</table>
+<p>**注意：**区分，斜杠：&quot;/&quot; 与 反斜杠：&quot;&quot; ,此处不可互换</p>
+<p>以上内容转自：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/DreamDrive/p/4676534.html">http://www.cnblogs.com/DreamDrive/p/4676534.html</a></p>
+<p>其它转义字符请参考<a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html">官方文档</a></p>
+</li>
+</ul>
+<h3 id="5-布尔值拓展"><a class="markdownIt-Anchor" href="#5-布尔值拓展"></a> 5. 布尔值拓展</h3>
+<ul>
+<li>判断 <code>flag == true</code> 可简化为 <code>flag</code></li>
+<li><mark>Less is More!</mark></li>
+</ul>
+<h3 id="6-代码"><a class="markdownIt-Anchor" href="#6-代码"></a> 6. 代码</h3>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo01</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">//*****************************************************</span>
+        <span class="hljs-comment">//整数拓展: 进制   二进制 0b   十进制   八进制 0   十六进制0x</span>
+        <span class="hljs-comment">//*****************************************************</span>
+        <span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>;
+        <span class="hljs-keyword">int</span> i2 = <span class="hljs-number">010</span>; <span class="hljs-comment">//八进制 0开头</span>
+        <span class="hljs-keyword">int</span> i3 = <span class="hljs-number">0x10</span>;  <span class="hljs-comment">//十六进制 0x开头   0~9 A~F</span>
+
+        System.out.println(i);  <span class="hljs-comment">//10</span>
+        System.out.println(i2);  <span class="hljs-comment">//8</span>
+        System.out.println(i3);  <span class="hljs-comment">//16</span>
+        System.out.println(<span class="hljs-string">"*****************************************************"</span>);
+
+        <span class="hljs-comment">//*****************************************************</span>
+        <span class="hljs-comment">//浮点数拓展</span>
+        <span class="hljs-comment">//BigDecimal 数学工具类 ← 银行业务</span>
+        <span class="hljs-comment">//*****************************************************</span>
+        <span class="hljs-comment">//float  double  有限 离散 有舍入误差  结果只是大约数  接近但是不等于</span>
+        <span class="hljs-comment">//最好**完全避免**使用浮点数进行比较</span>
+        <span class="hljs-comment">//最好**完全避免**使用浮点数进行比较</span>
+        <span class="hljs-comment">//最好**完全避免**使用浮点数进行比较</span>
+        <span class="hljs-keyword">float</span> f = <span class="hljs-number">0.1f</span>;
+        <span class="hljs-keyword">double</span> d = <span class="hljs-number">1.0</span>/<span class="hljs-number">10</span>;
+
+        System.out.println(f == d);  <span class="hljs-comment">//判断f与d是否相等，结果输出"false"</span>
+
+        <span class="hljs-keyword">float</span> f1 = <span class="hljs-number">121212121212f</span>;
+        <span class="hljs-keyword">float</span> f2 = f1 + <span class="hljs-number">1</span>;
+
+        System.out.println(f1 == f2);  <span class="hljs-comment">//判断f1与f2是否相等，结果输出"true"</span>
+        System.out.println(<span class="hljs-string">"*****************************************************"</span>);
+
+        <span class="hljs-comment">//*****************************************************</span>
+        <span class="hljs-comment">//字符拓展</span>
+        <span class="hljs-comment">//*****************************************************</span>
+        <span class="hljs-keyword">char</span> c1 = <span class="hljs-string">'a'</span>;
+        <span class="hljs-keyword">char</span> c2 = <span class="hljs-string">'中'</span>;
+
+        System.out.println(c1);
+        System.out.println((<span class="hljs-keyword">int</span>)c1);  <span class="hljs-comment">//强制转换，结果输出"97"；'A' = 65</span>
+
+        System.out.println(c2);
+        System.out.println((<span class="hljs-keyword">int</span>)c2);  <span class="hljs-comment">//强制转换，结果输出"20013"</span>
+
+        <span class="hljs-comment">//所有的字符本质上都是数字</span>
+        <span class="hljs-comment">//编码 Unicode  2Byte  0 ~ 65536  U0000 UFFFF</span>
+
+        <span class="hljs-keyword">char</span> c3 = <span class="hljs-string">'\u0061'</span>;
+
+        System.out.println(c3);  <span class="hljs-comment">//a</span>
+
+        <span class="hljs-comment">//转义字符</span>
+        <span class="hljs-comment">// \t 制表符  \n 换行</span>
+
+        System.out.println(<span class="hljs-string">"Hello\tWorld"</span>);
+        System.out.println(<span class="hljs-string">"*****************************************************"</span>);
+
+        <span class="hljs-comment">//*****************************************************</span>
+        String sa = <span class="hljs-keyword">new</span> String(<span class="hljs-string">"hello world"</span>);
+        String sb = <span class="hljs-keyword">new</span> String(<span class="hljs-string">"hello world"</span>);
+
+        System.out.println(sa == sb);  <span class="hljs-comment">//false</span>
+
+        String sc = <span class="hljs-string">"hello world"</span>;
+        String sd = <span class="hljs-string">"hello world"</span>;
+
+        System.out.println(sc == sd);  <span class="hljs-comment">//true</span>
+        <span class="hljs-comment">//对象  从内存分析</span>
+        System.out.println(<span class="hljs-string">"*****************************************************"</span>);
+
+        <span class="hljs-comment">//*****************************************************</span>
+        <span class="hljs-comment">//布尔值拓展</span>
+        <span class="hljs-comment">//*****************************************************</span>
+        <span class="hljs-keyword">boolean</span> flag = <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">if</span>(flag == <span class="hljs-keyword">true</span>)&#123;&#125;  <span class="hljs-comment">//新手</span>
+        <span class="hljs-keyword">if</span>(flag)&#123;&#125;  <span class="hljs-comment">//老手</span>
+        <span class="hljs-comment">//Less is More! 代码要精简易读</span>
+    &#125;
+&#125;
+</code></pre>
 <h1 id="三-类型转换"><a class="markdownIt-Anchor" href="#三-类型转换"></a> 三、类型转换</h1>
+<ul>
+<li>
+<p>由于Java是<code>强类型语言</code>，所以要进行某些运算的时候，需要用到类型转换</p>
+<pre class="highlight"><code class="b">低 -------------------------------------------------&gt; 高
+  byte, short, char -&gt; int -&gt; long -&gt; float -&gt; double
+</code></pre>
+</li>
+<li>
+<p>运算过程中，不同类型的数据要先转化为同一类型，然后进行运算</p>
+</li>
+<li>
+<p><code>低转高</code>自动转换，<code>高转低</code>强制转换即<code>(类型)变量名</code></p>
+</li>
+</ul>
+<h2 id="注意"><a class="markdownIt-Anchor" href="#注意"></a> 注意</h2>
+<ol>
+<li>
+<p>不能对布尔值进行转换</p>
+</li>
+<li>
+<p>不能把对象类型转换为不相干的类型</p>
+</li>
+<li>
+<p>在把高容量转换到低容量的时候，强制转换</p>
+</li>
+<li>
+<p><strong>转换的时候可能会存在内存溢出或者精度问题</strong></p>
+<pre class="highlight"><code class="java">System.out.println((<span class="hljs-keyword">byte</span>)<span class="hljs-number">128</span>);  <span class="hljs-comment">//-128  溢出</span>
+System.out.println((<span class="hljs-keyword">int</span>)<span class="hljs-number">23.7</span>);  <span class="hljs-comment">//23</span>
+System.out.println((<span class="hljs-keyword">int</span>)-<span class="hljs-number">45.89F</span>);  <span class="hljs-comment">//-45</span>
+===========================================
+<span class="hljs-keyword">char</span> ch1 = <span class="hljs-string">'a'</span>;
+<span class="hljs-keyword">int</span> num = ch1 + <span class="hljs-number">1</span>;
+System.out.println(num);  <span class="hljs-comment">//98</span>
+System.out.println((<span class="hljs-keyword">char</span>)num);  <span class="hljs-comment">//b</span>
+===========================================
+<span class="hljs-comment">//操作比较大的数的时候，注意溢出问题</span>
+<span class="hljs-comment">//JDK7新特性: 数字之间可以用下划线分割</span>
+<span class="hljs-keyword">int</span> money = <span class="hljs-number">10_0000_0000</span>;
+<span class="hljs-keyword">int</span> years = <span class="hljs-number">20</span>;
+<span class="hljs-keyword">int</span> total = money * years;  <span class="hljs-comment">//-1474836480  计算时溢出</span>
+<span class="hljs-keyword">long</span> total2 = money * years;  <span class="hljs-comment">//-1474836480  默认是int，转换之前已经存在问题了</span>
+<span class="hljs-keyword">long</span> total3 = money * ((<span class="hljs-keyword">long</span>)years);  <span class="hljs-comment">//20000000000  先把任意一个数转换为long即可</span>
+</code></pre>
+</li>
+</ol>
 <h1 id="四-变量-常量"><a class="markdownIt-Anchor" href="#四-变量-常量"></a> 四、变量、常量</h1>
+<h2 id="一-变量"><a class="markdownIt-Anchor" href="#一-变量"></a> (一) 变量</h2>
+<ul>
+<li>变量就是可以变化的量</li>
+<li>Java是一种强类型语言，每个变量都必须声明其类型</li>
+<li>Java变量是程序中最基本的存储单元，其要素包括<code>变量名</code>、<code>变量类型</code>和<code>作用域</code></li>
+<li><strong>不建议在一行中定义多个值</strong></li>
+</ul>
+<h3 id="注意-2"><a class="markdownIt-Anchor" href="#注意-2"></a> 注意:</h3>
+<ul>
+<li>每个变量名都有类型，类型可以是<code>基本类型</code>，也可以是<code>引用类型</code></li>
+<li>变量名必须是<strong>合法</strong>的标识符</li>
+<li>变量声明是一条完整的语句，因此每一个声明都必须以<code>分号</code>结束</li>
+</ul>
+<h3 id="变量作用域"><a class="markdownIt-Anchor" href="#变量作用域"></a> 变量作用域</h3>
+<ul>
+<li>
+<p><code>类变量</code></p>
+</li>
+<li>
+<p><code>实例变量</code>: 从属于对象，如不自行初始化，会输出这个类型的默认值</p>
+</li>
+<li>
+<p><code>局部变量</code>: 必须声明和初始化值</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo05</span> </span>&#123;
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> salary = <span class="hljs-number">2500</span>;  <span class="hljs-comment">//类变量 static</span>
+    String str = <span class="hljs-string">"hello world"</span>;  <span class="hljs-comment">//实例变量</span>
+    String name;  <span class="hljs-comment">//实例变量</span>
+    <span class="hljs-keyword">int</span> age;  <span class="hljs-comment">//实例变量</span>
+    <span class="hljs-keyword">double</span> num;  <span class="hljs-comment">//实例变量</span>
+    <span class="hljs-keyword">boolean</span> flag;  <span class="hljs-comment">//实例变量</span>
+
+    <span class="hljs-comment">//其它方法</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;  <span class="hljs-comment">//局部变量</span>
+    &#125;
+
+    <span class="hljs-comment">//main方法</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">//实例变量</span>
+        <span class="hljs-comment">//变量类型 变量名称 = new Demo05();</span>
+        Demo05 demo05 = <span class="hljs-keyword">new</span> Demo05();
+        System.out.println(demo05.age);  <span class="hljs-comment">//0</span>
+        System.out.println(demo05.name);  <span class="hljs-comment">//null  除了基本类型，都是"null"</span>
+        System.out.println(demo05.num);  <span class="hljs-comment">//0.0</span>
+        System.out.println(demo05.flag);  <span class="hljs-comment">//false  0</span>
+
+        <span class="hljs-comment">//类变量</span>
+        System.out.println(salary);  <span class="hljs-comment">//2500.0</span>
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+<h2 id="二-常量"><a class="markdownIt-Anchor" href="#二-常量"></a> (二) 常量</h2>
+<ul>
+<li>
+<p>常量就是初始化后不能改变的量</p>
+</li>
+<li>
+<p>所谓常量可以理解为一种特殊的变量，它的值被设定后，在程序运行过程中不能被改变</p>
+</li>
+<li>
+<p>常量名一般使用<code>大写字母</code></p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo06</span> </span>&#123;
+    <span class="hljs-comment">//修饰符不存在先后顺序  修饰符: 变量类型前的关键字</span>
+    <span class="hljs-comment">//final 常量名 = 值;</span>
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14159</span>;
+    
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        System.out.println(PI);
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+<h2 id="三-变量的命名规范"><a class="markdownIt-Anchor" href="#三-变量的命名规范"></a> (三) 变量的命名规范</h2>
+<ul>
+<li><strong>所有的变量、方法、类名</strong>：<mark>见名知意</mark></li>
+<li><strong>类成员变量</strong>：首字母小写和驼峰原则 : <code>monthSalary</code></li>
+<li><strong>局部变量</strong>：首字母小写和驼峰原则</li>
+<li><strong>常量</strong>：大写字母和下划线 : <code>MAX_VALUE</code></li>
+<li><strong>类名</strong>：首字母大写和驼峰原则 : <code>Man</code>，<code>GoodMan</code></li>
+<li><strong>方法名</strong>：首字母小写和驼峰原则 : <code>run()</code>，<code>runRun()</code></li>
+</ul>
 <h1 id="五-运算符"><a class="markdownIt-Anchor" href="#五-运算符"></a> 五、运算符</h1>
+<h2 id="一-基本运算符"><a class="markdownIt-Anchor" href="#一-基本运算符"></a> (一) 基本运算符</h2>
+<ul>
+<li>
+<p>Java语言支持如下运算符：</p>
+<ul>
+<li><strong>算术</strong>运算符 : <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>++</code>, <code>--</code></li>
+<li><strong>赋值</strong>运算符 : <code>=</code></li>
+<li><strong>关系</strong>运算符 : <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>==</code>, <code>!=</code>, <code>instansof</code></li>
+<li><strong>逻辑</strong>运算符 : <code>&amp;&amp;</code>, <code>||</code>, <code>!</code></li>
+<li><strong>位</strong>运算符 : <code>&amp;</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&gt;&gt;</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;&gt;</code></li>
+<li><strong>条件</strong>运算符 : <code>? :</code></li>
+<li>扩展<strong>赋值</strong>运算符 : <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code></li>
+</ul>
+</li>
+<li>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo01</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">//二元运算符</span>
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">20</span>;
+
+        System.out.println(a + b);  <span class="hljs-comment">//30</span>
+        System.out.println(a - b);  <span class="hljs-comment">//-10</span>
+        System.out.println(a * b);  <span class="hljs-comment">//200</span>
+        System.out.println(a / (<span class="hljs-keyword">double</span>)b);  <span class="hljs-comment">//0.5</span>
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo02</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-keyword">long</span> a = <span class="hljs-number">123123123123123L</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">123</span>;
+        <span class="hljs-keyword">short</span> c = <span class="hljs-number">10</span>;
+        <span class="hljs-keyword">byte</span> d = <span class="hljs-number">8</span>;
+
+        <span class="hljs-comment">//如果有long 结果都为Long；如果没有long 结果都为Int；如果有double 结果都为Double</span>
+        System.out.println(a + b + c + d);  <span class="hljs-comment">//Long</span>
+        System.out.println(b + c + d);  <span class="hljs-comment">//Int</span>
+        System.out.println(c + d);  <span class="hljs-comment">//Int</span>
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo03</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">//关系运算符返回的结果 : true  false</span>
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">20</span>;
+        <span class="hljs-keyword">int</span> c = <span class="hljs-number">21</span>;
+
+        <span class="hljs-comment">//取余，模运算</span>
+        System.out.println(c % a);  <span class="hljs-comment">//1</span>
+
+        <span class="hljs-comment">//关系运算符返回的结果 : true  false</span>
+        System.out.println(a &gt; b);  <span class="hljs-comment">//false</span>
+        System.out.println(a &lt; b);  <span class="hljs-comment">//true</span>
+        System.out.println(a == b);  <span class="hljs-comment">//false</span>
+        System.out.println(a != b);  <span class="hljs-comment">//true</span>
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li>
+<p>补充 :</p>
+<ul>
+<li>
+<p><mark>字符串连接符</mark></p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo07</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;
+        <span class="hljs-keyword">int</span> b = <span class="hljs-number">20</span>;
+        <span class="hljs-keyword">int</span> c = <span class="hljs-number">30</span>;
+
+        System.out.println(a + b);  <span class="hljs-comment">//30</span>
+
+        <span class="hljs-comment">//字符串连接符  +</span>
+        System.out.println(<span class="hljs-string">""</span> + a + b);  <span class="hljs-comment">//1020</span>
+        System.out.println(a + b + <span class="hljs-string">""</span>);  <span class="hljs-comment">//30</span>
+        System.out.println(a + b + <span class="hljs-string">""</span> + c);  <span class="hljs-comment">//3030</span>
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="二-自增自减运算符-初识math类"><a class="markdownIt-Anchor" href="#二-自增自减运算符-初识math类"></a> (二) 自增自减运算符、初识Math类</h2>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo04</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">//++ 自增 -- 自减  一元运算符</span>
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">3</span>;
+        <span class="hljs-keyword">int</span> b = a++;  <span class="hljs-comment">//先 b = a = 3，再 a = a+1 = 4</span>
+        <span class="hljs-keyword">int</span> c = ++a;  <span class="hljs-comment">//先 a = a+1 = 5，再 c = a = 5</span>
+
+        System.out.println(a);  <span class="hljs-comment">//5</span>
+        System.out.println(b);  <span class="hljs-comment">//3</span>
+        System.out.println(c);  <span class="hljs-comment">//5</span>
+
+        <span class="hljs-comment">//Math类</span>
+        <span class="hljs-comment">//幂运算 2^3 2*2*2 = 8</span>
+        <span class="hljs-comment">//很多运算我们会使用一些工具类来进行操作</span>
+        <span class="hljs-keyword">double</span> pow = Math.pow(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+
+        System.out.println(pow);  <span class="hljs-comment">//8.0</span>
+    &#125;
+&#125;
+</code></pre>
+<h2 id="三-逻辑运算符-位运算符-条件运算符"><a class="markdownIt-Anchor" href="#三-逻辑运算符-位运算符-条件运算符"></a> (三) 逻辑运算符、位运算符、条件运算符</h2>
+<h3 id="1-逻辑运算符"><a class="markdownIt-Anchor" href="#1-逻辑运算符"></a> 1. 逻辑运算符</h3>
+<ul>
+<li>
+<p>逻辑与运算 ( &amp;&amp; ) : 两个变量都为真，结果才为真</p>
+</li>
+<li>
+<p>逻辑或运算 ( || ) : 两个变量中有一个为真，结果就为真</p>
+</li>
+<li>
+<p>逻辑非运算 ( ! ) : 如果是真，结果为假；如果是假，结果为真</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo05</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">//&amp;&amp;(and)  ||(or)  !(取反)</span>
+        <span class="hljs-keyword">boolean</span> a = <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">boolean</span> b = <span class="hljs-keyword">false</span>;
+
+        System.out.println(<span class="hljs-string">"a &amp;&amp; b: "</span> + (a &amp;&amp; b));  <span class="hljs-comment">//a &amp;&amp; b: false</span>
+        System.out.println(<span class="hljs-string">"a || b: "</span> + (a || b));  <span class="hljs-comment">//a || b: true</span>
+        System.out.println(<span class="hljs-string">"!(a &amp;&amp; b): "</span> + !(a &amp;&amp; b));  <span class="hljs-comment">//!(a &amp;&amp; b): true</span>
+
+        <span class="hljs-comment">//短路运算</span>
+        <span class="hljs-keyword">int</span> c = <span class="hljs-number">5</span>;
+        <span class="hljs-keyword">boolean</span> d = (c&lt;<span class="hljs-number">4</span>) &amp;&amp; (c++&lt;<span class="hljs-number">4</span>);
+
+        System.out.println(d);  <span class="hljs-comment">//false</span>
+        System.out.println(c);  <span class="hljs-comment">//5  "c++"没有运行</span>
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+<h3 id="2-位运算符"><a class="markdownIt-Anchor" href="#2-位运算符"></a> 2. 位运算符</h3>
+<ul>
+<li>
+<p>二进制运算</p>
+<pre class="highlight"><code class="java">A = <span class="hljs-number">0011</span> <span class="hljs-number">1100</span>
+B = <span class="hljs-number">0000</span> <span class="hljs-number">1101</span>
+
+A&amp;B = <span class="hljs-number">0000</span> <span class="hljs-number">1100</span>  <span class="hljs-comment">//同1为1，否则为0</span>
+A|B = <span class="hljs-number">0011</span> <span class="hljs-number">1101</span>  <span class="hljs-comment">//有1为1，否则为0</span>
+A^B = <span class="hljs-number">0011</span> <span class="hljs-number">0001</span>  <span class="hljs-comment">//相同为0，不同为1 即不进位的二进制加法</span>
+~B = <span class="hljs-number">1111</span> <span class="hljs-number">0010</span>  <span class="hljs-comment">//相反</span>
+
+按位左移  --  &lt;&lt;
+    i &lt;&lt; <span class="hljs-number">1</span> 表示把 i 的所有二进制位左移一位，右边补<span class="hljs-number">0</span>
+    左移 n 位相当于乘以<span class="hljs-number">2</span>的n次方【二进制，十进制底为<span class="hljs-number">10</span>】
+    <span class="hljs-number">2</span>*<span class="hljs-number">8</span> = <span class="hljs-number">16</span>  <span class="hljs-number">2</span> *<span class="hljs-number">2</span>*<span class="hljs-number">2</span>*<span class="hljs-number">2</span> 即 <span class="hljs-number">2</span>&lt;&lt;<span class="hljs-number">3</span>
+按位右移  -- &gt;&gt;
+   i &gt;&gt; <span class="hljs-number">1</span> 表示把 i 的所有二进制位右移一位，左边补<span class="hljs-number">0</span>【正数/无符号右移<span class="hljs-string">"&gt;&gt;&gt;"</span>】或<span class="hljs-number">1</span>【负数】
+    右移 n 位相当于除以<span class="hljs-number">2</span>的n次方【二进制】（前提是数据不能丢失）
+<span class="hljs-number">0000</span> <span class="hljs-number">0000</span>    <span class="hljs-number">0</span>
+<span class="hljs-number">0000</span> <span class="hljs-number">0001</span>    <span class="hljs-number">1</span>
+<span class="hljs-number">0000</span> <span class="hljs-number">0010</span>    <span class="hljs-number">2</span>
+<span class="hljs-number">0000</span> <span class="hljs-number">0100</span>    <span class="hljs-number">4</span>
+<span class="hljs-number">0000</span> <span class="hljs-number">1000</span>    <span class="hljs-number">8</span>
+<span class="hljs-number">0001</span> <span class="hljs-number">0000</span>    <span class="hljs-number">16</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="3-三元运算符"><a class="markdownIt-Anchor" href="#3-三元运算符"></a> 3. 三元运算符</h3>
+<ul>
+<li>
+<p><mark>必须掌握</mark></p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo08</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">// x ? y : z</span>
+        <span class="hljs-comment">//如果 x == true, 则结果为 y, 否则为 z</span>
+        <span class="hljs-keyword">int</span> score = <span class="hljs-number">80</span>;
+        String type = score&lt;<span class="hljs-number">60</span> ? <span class="hljs-string">"不及格"</span> : <span class="hljs-string">"及格"</span>;
+
+        System.out.println(type);  <span class="hljs-comment">//及格</span>
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
 <h1 id="六-包机制-javadoc"><a class="markdownIt-Anchor" href="#六-包机制-javadoc"></a> 六、包机制、JavaDoc</h1>
+<h2 id="一-包机制"><a class="markdownIt-Anchor" href="#一-包机制"></a> (一) 包机制</h2>
+<ul>
+<li>
+<p>为了更好地组织<code>类</code>，Java提供了<code>包机制</code>，用于区别类名的命名空间</p>
+</li>
+<li>
+<p>包机制的语法格式为 :</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">package</span> pkg1[. pkg2[. pkg3...]];
+</code></pre>
+</li>
+<li>
+<p><mark>一般利用公司域名倒置作为包名</mark>  <code>io.github.naf2199</code></p>
+</li>
+<li>
+<p>为了能够使用某一个包的成员，我们需要再Java程序中明确导入该包，使用<code>import</code>语句可以完成此功能</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">import</span> package1[.package2...].(classname | *); <span class="hljs-comment">//*通配符，导入这个包下所有的类</span>
+</code></pre>
+</li>
+<li>
+<p>补充︰<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1XLMNP0E-mb7oCXC1uAywtA">阿里巴巴开发手册下载</a>   提取码 : id7d</p>
+</li>
+</ul>
+<h2 id="二-javadoc"><a class="markdownIt-Anchor" href="#二-javadoc"></a> (二) JavaDoc</h2>
+<ul>
+<li>
+<p>JavaDoc 是用来生成自己的<code>API文档</code>的</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/">官方JDK帮助文档</a></p>
+</li>
+<li>
+<p>参数信息</p>
+<pre class="highlight"><code class="java"><span class="hljs-comment">/**
+ * <span class="hljs-doctag">@author</span> 作者名
+ * <span class="hljs-doctag">@version</span> 版本号
+ * <span class="hljs-doctag">@since</span> 指明需要最早使用的jdk版本
+ * <span class="hljs-doctag">@param</span>  参数名
+ * <span class="hljs-doctag">@return</span> 返回值情况
+ * <span class="hljs-doctag">@throws</span> 异常抛出情况
+ */</span>
+</code></pre>
+</li>
+<li>
+<p>将Java文件编译成JavaDoc文档进行阅读</p>
+<ul>
+<li>
+<p>命令行</p>
+<pre class="highlight"><code class="bash">javadoc -encoding UTF-8 -charset UTF-8 文件名.java
+</code></pre>
+</li>
+<li>
+<p>IDEA</p>
+<pre class="highlight"><code class="bash">Tools -&gt; Generate JavaDoc
+配置<span class="hljs-string">"Other command line arguments"</span>: -encoding UTF-8 -charset UTF-8
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
 
 </div>
 
