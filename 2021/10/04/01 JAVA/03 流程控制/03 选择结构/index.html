@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		HelloWorld | 
+		03 选择结构 | 
 	 
 	正经人的笔记本
 	</title>
@@ -174,7 +174,7 @@ var _hmt = _hmt || [];
 									</a>
 									
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2021/10/02/01%20JAVA/01%20%E5%85%A5%E9%97%A8/HelloWorld/">
 										HelloWorld
 									</a>
@@ -232,7 +232,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/10/04/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/03%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/">
 										03 选择结构
 									</a>
@@ -283,12 +283,12 @@ var _hmt = _hmt || [];
 	<div id="content">
 		<h1 id="article-title">
 
-	HelloWorld
+	03 选择结构
 </h1>
 <div class="article-meta">
 	
 	<span>Zhou Yufan</span>
-	<span>2021-10-02 16:21:28</span>
+	<span>2021-10-04 15:41:11</span>
 		<div id="article-categories">
     
 		<span>Categories：</span>
@@ -307,7 +307,7 @@ var _hmt = _hmt || [];
                 
                     <span>
                         <i class="fa fa-folder" aria-hidden="true">
-                        <a href="/categories/01-JAVA/01-入门/">01 入门</a>
+                        <a href="/categories/01-JAVA/03-控制流程/">03 控制流程</a>
                         </i>
                       
                     </span>
@@ -332,53 +332,147 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<h1 id="步骤"><a class="markdownIt-Anchor" href="#步骤"></a> 步骤</h1>
-<ol>
-<li>新建文件夹，存放代码</li>
-<li>新建java文件
+	<h1 id="if-单选择结构"><a class="markdownIt-Anchor" href="#if-单选择结构"></a> if 单选择结构</h1>
 <ul>
-<li>文件后缀名为<code>.java</code></li>
-</ul>
+<li>
+<p>我们很多时候需要去判断一个东西是否可行，然后才去执行，这样一个过程在程序中用<code>if语句</code>来表示</p>
 </li>
-<li>编写代码</li>
-<li>编译<code>javac 文件名.java</code>，生成一个class文件</li>
-<li>运行class文件<code>java 文件名</code></li>
-</ol>
-<pre class="highlight"><code class="bash">D:\Undergraduate\Code\JavaCode&gt;javac HelloWorld.java
-
-D:\Undergraduate\Code\JavaCode&gt;java HelloWorld
-Hello, World!
-</code></pre>
-<h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
-<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span></span>&#123;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
-		System.out.print(<span class="hljs-string">"Hello, world!"</span>);
-	&#125;
+<li>
+<p>语法：</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">if</span> (布尔表达式) &#123;  <span class="hljs-comment">// 注意此处空格，小括号前后都有空格</span>
+    <span class="hljs-comment">// 如果布尔表达式为 ture 将执行的语句</span>
 &#125;
 </code></pre>
-<h2 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> <mark>注意事项</mark></h2>
-<ol>
-<li>注意单词大小写，标点符号中英文</li>
-<li>尽量使用英文</li>
-<li>文件名和类名必须保证一致，并且首字母大写</li>
-</ol>
-
+<div id="flowchart-0" class="flow-chart"></div>
+</li>
+</ul>
+<h1 id="if-双选择结构"><a class="markdownIt-Anchor" href="#if-双选择结构"></a> if 双选择结构</h1>
+<ul>
+<li>
+<p>如果现在有个需求，公司要收购一个软件，成功了，支付一百万元，失败了，自己找人开发。那么现在的需求用一个<code>if</code>就搞不行了，这时候我们需要有两个判断，需要一个双选择结构，所以就有了<code>if-else</code>结构</p>
+</li>
+<li>
+<p>语法：</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">if</span> (布尔表达式) &#123;
+    <span class="hljs-comment">// 如果布尔表达式的值为 true</span>
+&#125; <span class="hljs-keyword">else</span> &#123;
+    <span class="hljs-comment">// 如果布尔表达式的值为 false</span>
+&#125;
+</code></pre>
+<div id="flowchart-1" class="flow-chart"></div>
+</li>
+</ul>
+<h1 id="if-多选择结构"><a class="markdownIt-Anchor" href="#if-多选择结构"></a> if 多选择结构</h1>
+<ul>
+<li>
+<p>我们会发现以上代码不符合实际情况，真实的情况还可能存在ABCD，存在区间多级判断，在生活中我出门很多时候的选择也不仅仅只有两个，所以我们需要一个多选择结构来处理这类问题</p>
+</li>
+<li>
+<p>语法：</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">if</span> (布尔表达式<span class="hljs-number">1</span>) &#123;
+    <span class="hljs-comment">// 如果布尔表达式1的值为 true</span>
+&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (布尔表达式<span class="hljs-number">2</span>) &#123;
+    <span class="hljs-comment">// 如果布尔表达式2的值为 true</span>
+&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (布尔表达式<span class="hljs-number">3</span>) &#123;
+    <span class="hljs-comment">// 如果布尔表达式3的值为 true</span>
+&#125; <span class="hljs-keyword">else</span> &#123;
+    <span class="hljs-comment">// 如果以上布尔表达式的值都为 false</span>
+&#125;
+</code></pre>
+<div id="flowchart-2" class="flow-chart"></div>
+</li>
+</ul>
+<h1 id="嵌套的-if-结构"><a class="markdownIt-Anchor" href="#嵌套的-if-结构"></a> 嵌套的 if 结构</h1>
+<ul>
+<li>
+<p>使用嵌套的<code>if...else</code>语句是合法的，也就是说你可以在另一个<code>if</code>或者<code>else if</code>语句中使用<code>if</code>或者<code>else if</code>语句，你可以像<code>if</code>语句一样嵌套<code>else if ... else</code></p>
+</li>
+<li>
+<p>语法：</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">if</span> (布尔表达式<span class="hljs-number">1</span>) &#123;
+    <span class="hljs-comment">// 如果布尔表达式1的值为 true</span>
+    <span class="hljs-keyword">if</span> (布尔表达式<span class="hljs-number">2</span>) &#123;
+        <span class="hljs-comment">// 如果布尔表达式2的值为 true</span>
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+<h1 id="switch-多选择结构"><a class="markdownIt-Anchor" href="#switch-多选择结构"></a> switch 多选择结构</h1>
+<ul>
+<li>
+<p><code>switch case</code>语句判断一个变量与一系列中某个值是否相等<code>(匹配一个具体的值)</code>，每个值成为一个<code>分支</code></p>
+</li>
+<li>
+<p><code>switch</code>语句中的变量类型可以是：<code>byte</code>、<code>short</code>、<code>int</code>、<code>char</code>、<code>String(从Java SE 7开始)</code>；同时case标签必须为字符串常量或者字面量</p>
+</li>
+<li>
+<p>语法：</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">switch</span> (expression) &#123;
+    <span class="hljs-keyword">case</span> value:
+        <span class="hljs-comment">// 语句</span>
+        <span class="hljs-keyword">break</span>;  <span class="hljs-comment">// 可选</span>
+    <span class="hljs-keyword">case</span> value:
+        <span class="hljs-comment">// 语句</span>
+        <span class="hljs-keyword">break</span>;  <span class="hljs-comment">// 可选</span>
+    <span class="hljs-comment">// 你可以有任意数量的case语句</span>
+    <span class="hljs-keyword">default</span>: <span class="hljs-comment">// 可选</span>
+        <span class="hljs-comment">//语句</span>
+&#125;
+</code></pre>
+</li>
+<li>
+<p>不加<code>break</code>，case 穿透</p>
+</li>
+</ul>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">  st=>start: 开始
+  cond=>condition: 布尔表达式
+  io=>inputoutput: 输出结果
+  e=>end: 结束
+  
+  st->cond
+  cond(true)->io->e
+  cond(false)->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">  st=>start: 开始
+  cond=>condition: 布尔表达式
+  io1=>inputoutput: 输出结果1
+  io2=>inputoutput: 输出结果2
+  e=>end: 结束
+  
+  st->cond
+  cond(true)->io1->e
+  cond(false)->io2->e</textarea><textarea id="flowchart-1-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script><textarea id="flowchart-2-code" style="display: none">  st=>start: 开始
+  cond1=>condition: 布尔表达式1
+  cond2=>condition: 布尔表达式2
+  cond3=>condition: 布尔表达式3
+  io1=>inputoutput: 输出结果1
+  io2=>inputoutput: 输出结果2
+  io3=>inputoutput: 输出结果3
+  io4=>inputoutput: 输出结果4
+  e=>end: 结束
+  
+  st->cond1
+  cond1(true)->io1->e
+  cond1(false)->cond2
+  cond2(true)->io2->e
+  cond2(false)->cond3
+  cond3(true)->io3->e
+  cond3(false)->io4->e</textarea><textarea id="flowchart-2-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-2-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-2-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-2", options);</script>
 </div>
 
 
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/10/02/01%20JAVA/02%20%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+              <a href="/2021/10/04/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/04%20%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">
                   <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  Java基础语法
+                  04 循环结构
               </a>
             
         </div>
         <div class="item right">
             
-              <a href="/2021/10/02/00%20%E5%85%B6%E5%AE%83/DOS%E5%91%BD%E4%BB%A4/">
-                
+              <a href="/2021/10/04/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/02%20%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84/">
+                02 顺序结构
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             

@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		About | 
+		05 break&amp;continue | 
 	 
 	正经人的笔记本
 	</title>
@@ -250,7 +250,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/10/05/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/05%20break&continue/">
 										05 break&continue
 									</a>
@@ -283,26 +283,96 @@ var _hmt = _hmt || [];
 	<div id="content">
 		<h1 id="article-title">
 
-	About
+	05 break&continue
 </h1>
 <div class="article-meta">
 	
 	<span>Zhou Yufan</span>
-	<span>2021-10-01 13:49:54</span>
+	<span>2021-10-05 17:07:53</span>
 		<div id="article-categories">
     
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/01-JAVA/">01 JAVA</a>
+                        </i>
+                      
+                        >
+                      
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/01-JAVA/03-流程控制/">03 流程控制</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
 
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/Java/">Java</a>
+                        </i>
+                    </span>
+                
+            
     
 		</div>
 
 </div>
 
 <div id="article-content">
-	<p>还没想好，等想好了来更新</p>
-<p>2021.10.05  12:45</p>
+	<ul>
+<li>
+<p><code>break</code>在任何循环语句的主体部分，均可用<code>break</code>控制循环的流程，<code>break</code>用于强行退出循环，不执行循环中剩余的语句。(<code>break</code>语句也在<code>switch</code>语句中使用)</p>
+</li>
+<li>
+<p><code>continue</code>语句用在循环语句体中，用于终止某次循环过程，即跳过循环体中尚未执行的语句，接着进行下一次是否执行循环的判定</p>
+</li>
+<li>
+<p>关于<code>goto</code>关键字</p>
+<ul>
+<li><code>goto</code>关键字很早就在程序设计语言中出现，尽管<code>goto</code>仍是Java的一个保留字，但未在语言中得到证实使用：Java没有<code>goto</code>。然而，在<code>break</code>和<code>continue</code>这两个关键字身上，我们仍然可以看出一些<code>goto</code>的影子----<code>带标签的break和cotinue</code></li>
+<li><code>标签</code>是指后面跟着一个冒号的标识符，例如：<code>label:</code>
+<ul>
+<li>对于Java来说，唯一用到<code>标签</code>的地方是在循环语句之前，而在循环之前设置标签的唯一理由是：我们希望在其中嵌套另一个循环，由于<code>break</code>和<code>continue</code>关键字通常只中断当前循环，但若随同<code>标签</code>使用，他们就会中断到存在<code>标签</code>的地方</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 </div>
 
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/10/05/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/06%20%E7%BB%83%E4%B9%A0/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  06 练习
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/10/04/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/04%20%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">
+                04 循环结构
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
 
 
 
