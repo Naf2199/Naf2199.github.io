@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		02 递归 | 
 	 
 	正经人的笔记本
 	</title>
@@ -286,7 +288,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/10/06/01%20JAVA/04%20%E6%96%B9%E6%B3%95/02%20%E9%80%92%E5%BD%92/">
 										02 递归
 									</a>
@@ -317,64 +319,125 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
+		<h1 id="article-title">
+
+	02 递归
+</h1>
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2021/10/02/01%20JAVA/01%20%E5%85%A5%E9%97%A8/HelloWorld/">
-				<h2 class="index-title">
-					HelloWorld
-				</h2>
-				<div class="index-brief">
-					 步骤
+	<span>Zhou Yufan</span>
+	<span>2021-10-06 11:29:36</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/01-JAVA/">01 JAVA</a>
+                        </i>
+                      
+                        >
+                      
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/01-JAVA/04-方法/">04 方法</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
 
-新建文件夹，存放代码
-新建java文件
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/Java/">Java</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
 
-文件后缀名为.java
-
-
-编写代码
-编译javac 文件名.java，生成一个class文件
-运行class文件java 文件名
-
-D:\Undergraduate\Code\JavaCode&gt;javac HelloWorld.java
-
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-10-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-JAVA/">01 JAVA</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-JAVA/01-入门/">01 入门</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
 </div>
 
+<div id="article-content">
+	<ul>
+<li>
+<p>递归就是自己调用自己</p>
+</li>
+<li>
+<p>利用递归可以用简单的程序来解决一些复杂的外提，它通常把一个大型复杂的问题层层转化为一个与原问题相似的规模较小的问题来求解，递归策略只需少量的程序就可以描述出解题过程所需要的多次重复计算，大大减少了程序的代码量，递归的能力在于用有限的语句来定义对象的无限集合</p>
+</li>
+<li>
+<p><strong>递归结构包括两个部分：</strong></p>
+<ul>
+<li><code>递归头</code>：什么时候不调用自身方法。如果没有头，将陷入死循环</li>
+<li><code>递归体</code>：什么时候需要调用自身方法</li>
+</ul>
+</li>
+<li>
+<p>阶乘</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo05</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        System.out.println(factorial(<span class="hljs-number">5</span>));  <span class="hljs-comment">// 120</span>
+    &#125;
+
+    <span class="hljs-comment">// 阶乘</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">factorial</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>)&#123;
+            <span class="hljs-comment">// 递归头</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        &#125; <span class="hljs-keyword">else</span> &#123;
+            <span class="hljs-comment">// 递归体</span>
+            <span class="hljs-keyword">return</span> n * factorial(n - <span class="hljs-number">1</span>);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li>
+<p><mark>能不用递归就不用递归</mark></p>
+</li>
+</ul>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/10/07/01%20JAVA/05%20%E6%95%B0%E7%BB%84/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/10/06/01%20JAVA/04%20%E6%96%B9%E6%B3%95/01%20%E6%96%B9%E6%B3%95/">
+                01 方法
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>
