@@ -11,7 +11,7 @@
 	
 		05数组 | 
 	 
-	正经人的笔记本
+	禁止内卷
 	</title>
 	
 	<!-- keywords,description -->
@@ -89,7 +89,7 @@ var _hmt = _hmt || [];
 </script>
 
 <header id="header">
-    <a id="title" href="/" class="logo">正经人的笔记本</a>
+    <a id="title" href="/" class="logo">禁止内卷</a>
 
 	<ul id="menu">
 		<li class="menu-item">
@@ -387,10 +387,375 @@ dataType arrayRefVar[];  <span class="hljs-comment">// 效果相同，但不首�
 </code></pre>
 </li>
 </ul>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo01</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">// 声明创建一个数组</span>
+        <span class="hljs-keyword">int</span>[] nums = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">10</span>];
+
+        <span class="hljs-comment">// 给数组元素赋值</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) &#123;
+            nums[i] = i + <span class="hljs-number">1</span>;
+        &#125;
+
+        <span class="hljs-comment">// 遍历输出数组元素</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : nums) &#123;
+            System.out.print(i + <span class="hljs-string">"\t"</span>);
+        &#125;
+        System.out.println();
+
+        <span class="hljs-comment">// 计算数组元素和</span>
+        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : nums) &#123;
+            sum = sum + i;
+        &#125;
+        System.out.println(sum);
+    &#125;
+&#125;
+</code></pre>
+<h2 id="三种初始化"><a class="markdownIt-Anchor" href="#三种初始化"></a> 三种初始化</h2>
+<ul>
+<li>
+<p>静态初始化</p>
+<pre class="highlight"><code class="java"><span class="hljs-comment">// 基本类型 创建 + 赋值</span>
+<span class="hljs-keyword">int</span>[] a = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;
+<span class="hljs-comment">// 引用类型</span>
+Man[] mans = &#123;<span class="hljs-keyword">new</span> Man(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>), <span class="hljs-keyword">new</span> Man(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)&#125;;
+</code></pre>
+</li>
+<li>
+<p>动态初始化(包含默认初始化)</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">2</span>];
+a[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;
+a[<span class="hljs-number">1</span>] = <span class="hljs-number">2</span>;
+</code></pre>
+</li>
+<li>
+<p>数组的默认初始化</p>
+<ul>
+<li>数组是引用类型，它的元素相当于类的实例变量，因此数组一经分配空间，其中的每个元素也按照实例变量的方式被隐式初始化</li>
+</ul>
+</li>
+</ul>
 <h1 id="三-数组使用"><a class="markdownIt-Anchor" href="#三-数组使用"></a> 三、数组使用</h1>
+<h2 id="一-for-each循环"><a class="markdownIt-Anchor" href="#一-for-each循环"></a> (一) For- Each循环</h2>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo02</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-keyword">int</span>[] arrays = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>&#125;;
+
+        <span class="hljs-comment">// 普通for循环</span>
+        <span class="hljs-comment">// 打印全部的数组元素</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arrays.length; i++) &#123;
+            System.out.print(arrays[i] + <span class="hljs-string">"\t"</span>);
+        &#125;
+        System.out.println(<span class="hljs-string">"\n"</span> + <span class="hljs-string">"=============="</span>);
+
+        <span class="hljs-comment">// 计算所有元素的和</span>
+        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : arrays) &#123;
+            sum += i;
+        &#125;
+        System.out.println(<span class="hljs-string">"sum = "</span> + sum);
+        System.out.println(<span class="hljs-string">"=============="</span>);
+
+        <span class="hljs-comment">// 查找最大元素</span>
+        <span class="hljs-keyword">int</span> max = -<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : arrays) &#123;
+            <span class="hljs-keyword">if</span> (i &gt; max) &#123;
+                max = i;
+            &#125;
+        &#125;
+        System.out.println(<span class="hljs-string">"max = "</span> + max);
+    &#125;
+&#125;
+</code></pre>
+<h2 id="二-数组作方法入参"><a class="markdownIt-Anchor" href="#二-数组作方法入参"></a> (二) 数组作方法入参</h2>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo03</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-keyword">int</span>[] arrays = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>&#125;;
+
+        printArray(arrays);
+    &#125;
+    
+    <span class="hljs-comment">// 打印数组元素</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arrays)</span> </span>&#123;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arrays.length; i++) &#123;
+            System.out.print(arrays[i] + <span class="hljs-string">"\t"</span>);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="三-数组作返回值"><a class="markdownIt-Anchor" href="#三-数组作返回值"></a> (三) 数组作返回值</h2>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo04</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-keyword">int</span>[] arrays = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>&#125;;
+
+        <span class="hljs-keyword">int</span>[] reverse = reverse(arrays);
+        printArray(reverse);  <span class="hljs-comment">// 5    4    3    2    1</span>
+    &#125;
+
+    <span class="hljs-comment">// 反转数组</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] reverse(<span class="hljs-keyword">int</span>[] arrays) &#123;
+        <span class="hljs-keyword">int</span>[] result = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[arrays.length];
+
+        <span class="hljs-comment">// 反转</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, j = result.length - <span class="hljs-number">1</span>; i &lt; arrays.length; i++, j--) &#123;
+            result[j] = arrays[i];
+        &#125;
+        <span class="hljs-keyword">return</span> result;
+    &#125;
+
+    <span class="hljs-comment">// 打印数组元素</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arrays)</span> </span>&#123;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arrays.length; i++) &#123;
+            System.out.print(arrays[i] + <span class="hljs-string">"\t"</span>);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
 <h1 id="四-多维数组"><a class="markdownIt-Anchor" href="#四-多维数组"></a> 四、多维数组</h1>
+<ul>
+<li>多维数组可以看成是数组的数组，比如二维数组就是一个特殊的一维数组，其中每个元素都是一个一维数组</li>
+</ul>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo05</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">// 二维数组</span>
+        <span class="hljs-comment">// arrays[4][2] 四行两列</span>
+        <span class="hljs-comment">/*
+            1   2   arrays[0]
+            2   3   arrays[1]
+            3   4   arrays[2]
+            4   5   arrays[3]
+         */</span>
+        <span class="hljs-keyword">int</span>[][] arrays = &lt;!--swig￼<span class="hljs-number">0</span>--&gt;;
+
+        System.out.println(arrays[<span class="hljs-number">0</span>]);  <span class="hljs-comment">// [I@1b6d3586</span>
+        System.out.println(arrays[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]);  <span class="hljs-comment">// 1</span>
+        printArray(arrays[<span class="hljs-number">0</span>]);  <span class="hljs-comment">// 1    2</span>
+        System.out.println(arrays.length);  <span class="hljs-comment">// 4</span>
+        System.out.println(arrays[<span class="hljs-number">0</span>].length);  <span class="hljs-comment">// 2</span>
+        System.out.println(<span class="hljs-string">"========"</span>);
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arrays.length; i++) &#123;
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; arrays[i].length; j++) &#123;
+                System.out.print(arrays[i][j] + <span class="hljs-string">"\t"</span>);
+            &#125;
+            System.out.println();
+        &#125;
+    &#125;
+
+    <span class="hljs-comment">// 打印数组元素</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arrays)</span> </span>&#123;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arrays.length; i++) &#123;
+            System.out.print(arrays[i] + <span class="hljs-string">"\t"</span>);
+        &#125;
+        System.out.println();
+    &#125;
+&#125;
+</code></pre>
 <h1 id="五-arrays-类"><a class="markdownIt-Anchor" href="#五-arrays-类"></a> 五、Arrays 类</h1>
-<h1 id="六-稀疏数组"><a class="markdownIt-Anchor" href="#六-稀疏数组"></a> 六、稀疏数组</h1>
+<ul>
+<li>数组的工具类 <code>java.util.Arrays</code></li>
+<li>由于数组对象本身并没有什么方法可以供我们调用，但API中提供了一个工具类<code>Arrays</code>供我们使用，从而可以对数据对象进行一些基本的操作</li>
+<li><code>Arrays类</code>中的方法都是<code>static</code>修饰的静态方法，在使用的时候可以直接使用类名进行调用，而<mark>不用</mark>使用对象来调用</li>
+<li>具有以下常用功能
+<ul>
+<li>给数组赋值：通过<code>fill</code>方法</li>
+<li>对数组排序：通过<code>sort</code>方法，按升序</li>
+<li>比较数组：通过<code>equals</code>方法比较数组中元素值是否相等</li>
+<li>查找数组元素：通过<code>binarySearch</code>方法能对排序好的数组进行二分查找法操作</li>
+</ul>
+</li>
+</ul>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">import</span> java.util.Arrays;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo06</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-keyword">int</span>[] a = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">21</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;
+        System.out.println(a);  <span class="hljs-comment">// [I@1b6d3586</span>
+
+        <span class="hljs-comment">// 打印数组元素</span>
+        System.out.println(Arrays.toString(a));  <span class="hljs-comment">// [1, 21, 5, 3, 9, 2, 3]</span>
+
+        <span class="hljs-comment">// 数组排序，升序</span>
+        Arrays.sort(a);
+        System.out.println(Arrays.toString(a));  <span class="hljs-comment">// [1, 2, 3, 3, 5, 9, 21]</span>
+
+        <span class="hljs-comment">// 数组填充</span>
+        Arrays.fill(a, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">0</span>);
+        System.out.println(Arrays.toString(a));  <span class="hljs-comment">// [1, 2, 0, 0, 5, 9, 21]</span>
+        Arrays.fill(a, <span class="hljs-number">0</span>);
+        System.out.println(Arrays.toString(a));  <span class="hljs-comment">// [0, 0, 0, 0, 0, 0, 0]</span>
+    &#125;
+&#125;
+</code></pre>
+<h1 id="六-冒泡排序"><a class="markdownIt-Anchor" href="#六-冒泡排序"></a> 六、冒泡排序</h1>
+<ul>
+<li>时间复杂度  <strong>O(n<sup>2</sup>)</strong></li>
+</ul>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">import</span> java.util.Arrays;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo07</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-keyword">int</span>[] a = &#123;<span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">789</span>, <span class="hljs-number">25</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">35</span>&#125;;
+        <span class="hljs-keyword">int</span>[] sort;
+        <span class="hljs-comment">// 升序</span>
+        sort = sortAscending(a);
+        System.out.println(Arrays.toString(sort));  <span class="hljs-comment">// [0, 1, 2, 2, 5, 25, 35, 789]</span>
+        <span class="hljs-comment">// 降序</span>
+        sort = sortDescending(a);
+        System.out.println(Arrays.toString(sort));  <span class="hljs-comment">// [789, 35, 25, 5, 2, 2, 1, 0]</span>
+    &#125;
+
+    <span class="hljs-comment">/*
+        冒泡排序 - 升序
+        比较数组中相邻的元素，如果第一个数比第二个大，我们就交换他们的位置
+        每一次比较都会产生一个最大的数字
+        下一轮可以少一次排序
+     */</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] sortAscending(<span class="hljs-keyword">int</span>[] array) &#123;
+        <span class="hljs-comment">// 临时变量</span>
+        <span class="hljs-keyword">int</span> temp;
+        <span class="hljs-comment">// 外层循环，判断需要循环多少次</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; array.length - <span class="hljs-number">1</span>; i++) &#123;
+            <span class="hljs-comment">// 内层循环，比较两个数，如果第一个比第二个大，交换顺序</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; array.length - <span class="hljs-number">1</span> - i; j++) &#123;
+                <span class="hljs-keyword">if</span> (array[j] &gt; array[j + <span class="hljs-number">1</span>]) &#123;
+                    temp = array[j + <span class="hljs-number">1</span>];
+                    array[j + <span class="hljs-number">1</span>] = array[j];
+                    array[j] = temp;
+                &#125;
+            &#125;
+        &#125;
+        <span class="hljs-comment">// 返回</span>
+        <span class="hljs-keyword">return</span> array;
+    &#125;
+
+    <span class="hljs-comment">// 冒泡排序 - 降序</span>
+    <span class="hljs-comment">// 优化</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] sortDescending(<span class="hljs-keyword">int</span>[] array) &#123;
+        <span class="hljs-comment">// 临时变量</span>
+        <span class="hljs-keyword">int</span> temp;
+        <span class="hljs-comment">// 外层循环，判断需要循环多少次</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; array.length - <span class="hljs-number">1</span>; i++) &#123;
+            <span class="hljs-keyword">boolean</span> flag = <span class="hljs-keyword">false</span>;  <span class="hljs-comment">// 通过flag表示为减少没有意义的比较</span>
+
+            <span class="hljs-comment">// 内层循环，比较两个数，如果第一个比第二个小，交换顺序</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; array.length - <span class="hljs-number">1</span> - i; j++) &#123;
+                <span class="hljs-keyword">if</span> (array[j] &lt; array[j + <span class="hljs-number">1</span>]) &#123;
+                    temp = array[j + <span class="hljs-number">1</span>];
+                    array[j + <span class="hljs-number">1</span>] = array[j];
+                    array[j] = temp;
+
+                    flag = <span class="hljs-keyword">true</span>;
+                &#125;
+            &#125;
+
+            <span class="hljs-comment">// if (flag == false) 如果已经排好序，跳出循环</span>
+            <span class="hljs-keyword">if</span> (!flag) &#123;
+                <span class="hljs-keyword">break</span>;
+            &#125;
+        &#125;
+        <span class="hljs-comment">// 返回</span>
+        <span class="hljs-keyword">return</span> array;
+    &#125;
+&#125;
+</code></pre>
+<h1 id="七-稀疏数组"><a class="markdownIt-Anchor" href="#七-稀疏数组"></a> 七、稀疏数组</h1>
+<ul>
+<li>当一个数组中大部分元素为<code>0</code>或者为<code>同一值</code>的数组时，可以使用<code>稀疏数组</code>来保存该数组</li>
+<li>稀疏数组的处理方式：
+<ul>
+<li>记录数组一共有几行几列，有多少个不同值</li>
+<li>把具有不同值的元素的<code>行列</code>及<code>值</code>记录在一个小规模的数组中，从而缩小程序的规模</li>
+</ul>
+</li>
+</ul>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo08</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">// 创建一个二维数组 11 * 11  0: 没有棋子, 1: 黑棋, 2: 白棋</span>
+        <span class="hljs-keyword">int</span>[][] array1 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">11</span>][<span class="hljs-number">11</span>];
+        array1[<span class="hljs-number">1</span>][<span class="hljs-number">2</span>] = <span class="hljs-number">1</span>;  <span class="hljs-comment">// 第二行 第三列 黑棋</span>
+        array1[<span class="hljs-number">2</span>][<span class="hljs-number">3</span>] = <span class="hljs-number">2</span>;  <span class="hljs-comment">// 第三行 第四列 白棋</span>
+
+        <span class="hljs-comment">// 输出原始数组</span>
+        System.out.println(<span class="hljs-string">"原始数组: "</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] ints : array1) &#123;
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> anInt : ints) &#123;
+                System.out.print(anInt + <span class="hljs-string">"\t"</span>);
+            &#125;
+            System.out.println();
+        &#125;
+        System.out.println(<span class="hljs-string">"=============================="</span>);
+
+        <span class="hljs-comment">// 转换为稀疏数组保存</span>
+        <span class="hljs-comment">// 1. 获取有效值个数</span>
+        <span class="hljs-keyword">int</span> total = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; array1.length; i++) &#123;
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; array1[i].length; j++) &#123;
+                <span class="hljs-keyword">if</span> (array1[i][j] != <span class="hljs-number">0</span>) &#123;
+                    total++;
+                &#125;
+            &#125;
+        &#125;
+        System.out.println(<span class="hljs-string">"有效值的个数为: "</span> + total);
+
+        <span class="hljs-comment">// 2. 创建一个稀疏数组对应的数组</span>
+        <span class="hljs-comment">/*
+            [0]  行数   列数    不同值个数
+            [1] 第几行  第几列     数值
+            [2]  ...   ...      ...
+            ...  ...   ...      ...
+         */</span>
+        <span class="hljs-keyword">int</span>[][] array2 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[total+<span class="hljs-number">1</span>][<span class="hljs-number">3</span>];
+
+        array2[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = array1.length;  <span class="hljs-comment">// 行数</span>
+        array2[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>] = array1[<span class="hljs-number">0</span>].length;  <span class="hljs-comment">// 列数</span>
+        array2[<span class="hljs-number">0</span>][<span class="hljs-number">2</span>] = total;  <span class="hljs-comment">// 不同值个数</span>
+
+        <span class="hljs-comment">// 3. 遍历二维数组，将非零的值存放到稀疏数组中</span>
+        <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; array1.length; i++) &#123;
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; array1[i].length; j++) &#123;
+                <span class="hljs-keyword">if</span> (array1[i][j] != <span class="hljs-number">0</span>) &#123;
+                    count++;
+                    array2[count][<span class="hljs-number">0</span>] = i;  <span class="hljs-comment">// 第几行</span>
+                    array2[count][<span class="hljs-number">1</span>] = j;  <span class="hljs-comment">// 第几列</span>
+                    array2[count][<span class="hljs-number">2</span>] = array1[i][j];  <span class="hljs-comment">// 数值</span>
+                &#125;
+            &#125;
+        &#125;
+
+        <span class="hljs-comment">// 输出稀疏数组</span>
+        System.out.println(<span class="hljs-string">"稀疏数组: "</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] ints : array2) &#123;
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> anInt : ints) &#123;
+                System.out.print(anInt + <span class="hljs-string">"\t"</span>);
+            &#125;
+            System.out.println();
+        &#125;
+        System.out.println(<span class="hljs-string">"=============================="</span>);
+
+        <span class="hljs-comment">// 还原数组</span>
+        <span class="hljs-comment">// 1. 读取稀疏数组</span>
+        <span class="hljs-keyword">int</span>[][] array3 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[array2[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]][array2[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>]];  <span class="hljs-comment">// [行][列]</span>
+
+        <span class="hljs-comment">// 2. 还原元素的值</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; array2.length; i++) &#123;
+            <span class="hljs-comment">// 行: array2[i][0], 列: array2[i][1], 值: array2[i][3]</span>
+            array3[array2[i][<span class="hljs-number">0</span>]][array2[i][<span class="hljs-number">1</span>]] = array2[i][<span class="hljs-number">2</span>];
+        &#125;
+
+        <span class="hljs-comment">// 输出还原的数组</span>
+        System.out.println(<span class="hljs-string">"原始数组: "</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] ints : array3) &#123;
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> anInt : ints) &#123;
+                System.out.print(anInt + <span class="hljs-string">"\t"</span>);
+            &#125;
+            System.out.println();
+        &#125;
+    &#125;
+&#125;
+</code></pre>
 
 </div>
 
