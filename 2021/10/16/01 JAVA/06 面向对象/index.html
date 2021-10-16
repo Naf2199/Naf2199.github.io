@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		06 面向对象 | 
+	 
+	禁止内卷
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.baidu.com/s?wd=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "naf2199.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body>
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">禁止内卷</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">关于</a>
+		</li>
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">标签</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">分类</a>
+		</li>
+	
+
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										00 其它
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/10/02/00%20%E5%85%B6%E5%AE%83/DOS%E5%91%BD%E4%BB%A4/">
+										DOS命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/01/00%20%E5%85%B6%E5%AE%83/MarkDown/">
+										MarkDown
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 JAVA
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 入门
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/10/02/01%20JAVA/01%20%E5%85%A5%E9%97%A8/HelloWorld/">
+										HelloWorld
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 基础
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/10/02/01%20JAVA/02%20%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+										Java基础语法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 流程控制
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/10/04/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/01%20%E7%94%A8%E6%88%B7%E4%BA%A4%E4%BA%92Scanner/">
+										01 用户交互Scanner
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/04/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/02%20%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84/">
+										02 顺序结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/04/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/03%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/">
+										03 选择结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/04/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/04%20%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">
+										04 循环结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/05/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/05%20break&continue/">
+										05 break&continue
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/05/01%20JAVA/03%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/06%20%E7%BB%83%E4%B9%A0/">
+										06 练习
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 方法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/10/06/01%20JAVA/04%20%E6%96%B9%E6%B3%95/01%20%E6%96%B9%E6%B3%95/">
+										01 方法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/06/01%20JAVA/04%20%E6%96%B9%E6%B3%95/02%20%E9%80%92%E5%BD%92/">
+										02 递归
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/10/07/01%20JAVA/05%20%E6%95%B0%E7%BB%84/">
+										05 数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2021/10/16/01%20JAVA/06%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+										06 面向对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	06 面向对象
+</h1>
+<div class="article-meta">
+	
+	<span>Zhou Yufan</span>
+	<span>2021-10-16 08:16:52</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/01-JAVA/">01 JAVA</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
+
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/Java/">Java</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h1 id="一-什么是面向对象"><a class="markdownIt-Anchor" href="#一-什么是面向对象"></a> 一、什么是面向对象?</h1>
+<ul>
+<li>
+<p>面向对象编程 <code>(Object-Oriented Programming, OOP)</code></p>
+</li>
+<li>
+<p>面向对象编程的本质就是：<mark>以类的方式组织代码，以对象的形式组织(封装)数据</mark></p>
+</li>
+<li>
+<p>三大特征</p>
+<ul>
+<li>封装</li>
+<li>继承</li>
+<li>多态</li>
+</ul>
+</li>
+<li>
+<p>从认识角度考虑是先有对象后有类。对象，是具体的事物。类，是抽象的，是对对象的抽象</p>
+</li>
+<li>
+<p>从代码运行角度考虑是先有类后有对象，类是对象的模板</p>
+</li>
+</ul>
+<h1 id="二-方法回顾及加深"><a class="markdownIt-Anchor" href="#二-方法回顾及加深"></a> 二、方法回顾及加深</h1>
+<h2 id="一-方法的定义"><a class="markdownIt-Anchor" href="#一-方法的定义"></a> (一) 方法的定义</h2>
+<ul>
+<li>
+<p>修饰符</p>
+</li>
+<li>
+<p>返回值类型</p>
+<pre class="highlight"><code class="java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo01</span> </span>&#123;
+    <span class="hljs-comment">// main 方法</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+
+    &#125;
+
+    <span class="hljs-comment">/*
+        修饰符 返回值类型 方法名(  ) &#123;
+            // 方法体
+            return 返回值;
+        &#125;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">sayHello</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"Hello, world!"</span>;
+    &#125;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">hello</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">return</span>;
+    &#125;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>&#123;
+        <span class="hljs-keyword">return</span> a &gt; b ? a : b;
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li>
+<p><code>break</code> 和 <code>return</code> 的区别</p>
+<ul>
+<li><code>break</code>：跳出<code>switch</code>，结束循环</li>
+<li><code>return</code>：结束方法，返回一个结果</li>
+</ul>
+</li>
+<li>
+<p>方法名：注意规范!!!见名知意</p>
+</li>
+<li>
+<p>参数列表：(参数类型 参数名)   …可变长参数</p>
+</li>
+<li>
+<p>异常抛出</p>
+<pre class="highlight"><code class="java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">readFile</span><span class="hljs-params">(String file)</span> <span class="hljs-keyword">throws</span> IOException </span>&#123;
+    
+&#125;
+</code></pre>
+</li>
+</ul>
+<h2 id="二-方法的调用"><a class="markdownIt-Anchor" href="#二-方法的调用"></a> (二) 方法的调用</h2>
+<ul>
+<li>
+<p>静态方法：和类一起加载的</p>
+</li>
+<li>
+<p>非静态方法：类实例化之后才存在</p>
+<pre class="highlight"><code class="java"><span class="hljs-comment">// Demo02.java</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo02</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">// 静态方法 static</span>
+        <span class="hljs-comment">// 类名.方法名</span>
+        Student.say();
+
+        <span class="hljs-comment">// 非静态方法</span>
+        <span class="hljs-comment">// 实例化这个类 new</span>
+        <span class="hljs-comment">// 对象类型 对象名 = 对象值</span>
+        <span class="hljs-comment">// 对象名.方法名</span>
+        Student student = <span class="hljs-keyword">new</span> Student();
+        student.notSay();
+    &#125;
+    
+    <span class="hljs-comment">/*
+        静态方法只能调用静态方法，不能调用非静态方法
+        非静态方法可以调用静态方法和非静态方法
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">a</span><span class="hljs-params">()</span> </span>&#123;
+        b();
+    &#125;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">b</span><span class="hljs-params">()</span> </span>&#123;
+
+    &#125;
+&#125;
+</code></pre>
+<pre class="highlight"><code class="java"><span class="hljs-comment">// Student.java</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>&#123;
+    <span class="hljs-comment">// 静态方法</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">say</span><span class="hljs-params">()</span> </span>&#123;
+        System.out.println(<span class="hljs-string">"学生说话了"</span>);
+    &#125;
+
+    <span class="hljs-comment">// 非静态方法</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notSay</span><span class="hljs-params">()</span> </span>&#123;
+        System.out.println(<span class="hljs-string">"学生没有说话"</span>);
+    &#125;
+&#125;
+</code></pre>
+</li>
+<li>
+<p>形参和实参</p>
+</li>
+<li>
+<p>值传递和引用传递</p>
+<pre class="highlight"><code class="java"><span class="hljs-comment">// 值传递：传递一个值</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo03</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-keyword">int</span> a = <span class="hljs-number">1</span>;
+        System.out.println(a);  <span class="hljs-comment">// 1</span>
+
+        change(a);
+        System.out.println(a);  <span class="hljs-comment">// 1</span>
+    &#125;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">change</span><span class="hljs-params">(<span class="hljs-keyword">int</span> b)</span> </span>&#123;
+        b = <span class="hljs-number">10</span>;
+    &#125;
+&#125;
+</code></pre>
+<pre class="highlight"><code class="java"><span class="hljs-comment">// 引用传递：传递一个对象(的地址)，本质还是值传递</span>
+<span class="hljs-comment">// 对应C语言的指针</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo04</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        Person person = <span class="hljs-keyword">new</span> Person();
+        System.out.println(person.name);  <span class="hljs-comment">// null</span>
+
+        Demo04.change(person);
+        System.out.println(person.name);  <span class="hljs-comment">// zz</span>
+    &#125;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">change</span><span class="hljs-params">(Person person)</span> </span>&#123;
+        person.name = <span class="hljs-string">"zz"</span>;
+    &#125;
+&#125;
+
+<span class="hljs-comment">// 定义了一个 Person 类，有一个属性: name</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;
+    String name;  <span class="hljs-comment">// 默认null</span>
+&#125;
+</code></pre>
+</li>
+<li>
+<p><code>this</code>关键字</p>
+<ul>
+<li><code>this.属性</code>：当前这个类的某个属性</li>
+</ul>
+</li>
+</ul>
+<h1 id="三-类与对象的关系"><a class="markdownIt-Anchor" href="#三-类与对象的关系"></a> 三、类与对象的关系</h1>
+<ul>
+<li>类是一种抽象的数据类型，它是对某一类十五整体描述/定义，但是不能代表某一个具体的事物 (可以想象成集合)</li>
+<li>对象是抽象概念的具体实例(可以想象成集合中的元素)</li>
+</ul>
+<h2 id="一-创建与初始化对象"><a class="markdownIt-Anchor" href="#一-创建与初始化对象"></a> (一) 创建与初始化对象</h2>
+<ul>
+<li>
+<p>使用<code>new</code>关键字创建对象</p>
+</li>
+<li>
+<p>使用<code>new</code>关键字创建的时候，除了分配内存空间之外，还会给创建好的对象进行默认的初始化以及对类中<strong>构造器</strong>的调用</p>
+</li>
+<li>
+<p>类中的构造器也称为<code>构造方法</code>，是在进行创建对象的时候必须要调用的。并且构造器有以下俩个特点:</p>
+<ul>
+<li>必须和类的名字相同</li>
+<li>必须没有返回类型，也不能写void</li>
+</ul>
+<pre class="highlight"><code class="java"><span class="hljs-comment">// Student.java</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>&#123;
+    <span class="hljs-comment">// 属性: 字段</span>
+    String name;
+    <span class="hljs-keyword">int</span> age;
+
+    <span class="hljs-comment">// 方法</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">study</span><span class="hljs-params">()</span> </span>&#123;
+        System.out.println(<span class="hljs-keyword">this</span>.name + <span class="hljs-string">"在学习"</span>);
+    &#125;
+&#125;
+</code></pre>
+<pre class="highlight"><code class="java"><span class="hljs-comment">// Application.java</span>
+<span class="hljs-comment">// 一个项目中应该只有一个main方法</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Application</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">// 类: 抽象的, 需要实例化</span>
+        <span class="hljs-comment">// 类实例化后会返回一个自己的对象</span>
+        <span class="hljs-comment">// student对象就是一个Student类的具体实例</span>
+        Student student = <span class="hljs-keyword">new</span> Student();
+        Student jack = <span class="hljs-keyword">new</span> Student();
+        Student alice = <span class="hljs-keyword">new</span> Student();
+
+        System.out.println(jack.name);  <span class="hljs-comment">// null</span>
+ 
+        jack.name = <span class="hljs-string">"Jack"</span>;
+        jack.age = <span class="hljs-number">12</span>;
+        System.out.println(jack.name);  <span class="hljs-comment">// Jack</span>
+        System.out.println(jack.age);  <span class="hljs-comment">// 12</span>
+
+        alice.name = <span class="hljs-string">"Alice"</span>;
+        alice.age = <span class="hljs-number">12</span>;
+        System.out.println(alice.name);  <span class="hljs-comment">// Alice</span>
+        System.out.println(alice.age);  <span class="hljs-comment">// 12</span>
+
+        jack.study();  <span class="hljs-comment">// Jack在学习</span>
+    &#125;
+&#125;
+
+
+============================
+</code></pre>
+<pre class="highlight"><code class="java"><span class="hljs-comment">// Person.java</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>  </span>&#123;
+    <span class="hljs-comment">// 一个类即使什么都不写，他也会存在一个方法</span>
+
+    String name;
+
+    <span class="hljs-comment">// IDEA Alt + Insert - constructor - SelectNone 自动生成无参构造期</span>
+    <span class="hljs-comment">// 显示地定义构造器</span>
+    <span class="hljs-comment">// 实例化初始值</span>
+    <span class="hljs-comment">// 1. 使用new关键字, 本质是在调用构造器</span>
+    <span class="hljs-comment">// 2. 构造器用来初始化值</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">this</span>.name = <span class="hljs-string">"小明"</span>;
+    &#125;
+
+    <span class="hljs-comment">// IDEA Alt + Insert - constructor 自动生成有参构造器</span>
+    <span class="hljs-comment">// 有参构造  一旦定义了有参构造, 无参构造必须显示定义</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String name)</span> </span>&#123;
+        <span class="hljs-keyword">this</span>.name = name;
+    &#125;
+&#125;
+
+<span class="hljs-comment">/*
+    构造器:
+        1. 和类名相同
+        2. 没有返回值
+    作用:
+        1. new 本质在调用构造器
+        2. 初始化对象的值
+    注意点:
+        1. 定义有参构造之后, 如果想使用无参构造,
+           必须显示地定义一个无参构造
+    IDEA Alt + Insert 生成构造器
+ */</span>
+</code></pre>
+<pre class="highlight"><code class="java"><span class="hljs-comment">// Application.java</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Application</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        <span class="hljs-comment">// new 实例化一个对象</span>
+        Person person = <span class="hljs-keyword">new</span> Person();
+        System.out.println(person.name);  <span class="hljs-comment">// 小明</span>
+
+        Person person2 = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"小红"</span>);
+        System.out.println(person2.name);  <span class="hljs-comment">// 小红</span>
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/10/07/01%20JAVA/05%20%E6%95%B0%E7%BB%84/">
+                05 数组
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2021-<span id="footerYear"></span> 
+	<a href="/">Zhou Yufan</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
